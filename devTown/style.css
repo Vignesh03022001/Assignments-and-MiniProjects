@@ -113,7 +113,8 @@ descendant selectors in css
     padding: 5px;
     margin: 5px;
 }
-/* inline the width can't br manipulated it depends only on content present inside inline */
+/* inline the width can't be manipulated it depends only on content present inside inline */
+
 .block{
     display: block;
     background-color: teal;
@@ -125,6 +126,7 @@ descendant selectors in css
     width: 250px;
 }
 /* in this block the element takes entire width irrespective of the content */
+
 .inline-block{
     display: inline-block;
     background-color: rosybrown;
@@ -134,5 +136,51 @@ descendant selectors in css
     top: 10px;
     margin: 5px;
     padding: 5px;
-
 }
+/* this makes content inline and also considers width property over content */
+hr{
+    height: 7px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px black;
+    width: 650px;
+}
+.static{
+    position: static;
+    border: 3px dashed black;
+    margin: 10px;
+    padding: 5px;;
+}
+/* static is by default property */
+
+.relative{
+    position: relative;
+    top: 20px;
+    left: 25px;
+    width: 500px;
+}
+/* relative makes content to move from static with given offset values */
+
+.fixed{
+    position: fixed;
+    top: 8px;
+    background-color: blueviolet;
+    width: 100px;
+    text-align: center;
+}
+/* this will fixed relative to viewport or else body */
+
+.sticky{
+    position: sticky;
+    top: 15px;
+    left: 250px;
+    width: 100px;
+    background-color: blanchedalmond;
+}
+/* this will be static but when scroll begins beyond respected web page height it changes to fixed */
+
+.absolute{
+    position: absolute;
+    top: 35px;
+    right: 100px;
+}
+/* this is relative to relative parent unless no parents are relative it will be relative to body*/
