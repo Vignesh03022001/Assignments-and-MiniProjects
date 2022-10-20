@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Oxygen|Sofia&effect=shadow-multiple|fire|neon");
+
+*{
+    box-sizing: border-box;
+}
+
+h5{
+    color: white;
+    background-color: orangered;
+    border: black double 8px;
+    padding: 5px;
+    width: 250px;
+    text-align: center;
+}
+h1{
+    color:blue; 
+    background-color:antiquewhite; 
+    border: black solid 2px;
+    text-align: center;
+}
+h6{
+    color: white; 
+    background-color:black; 
+    font-size:2rem; font-style: italic;
+    padding:0 5px 0;
+    /* 
+    top,right,bottom,left
+    top-bottom,right-left
+    top,right-left,bottom
+     */
+}
+
+.boxModel p{
+    border: 2px solid orangered;
+    padding: 10px;
+    margin: 50px;
+    text-align: center;
+    box-shadow:2px 2px 5px 7.5px red;
+    /* 
+    h-offset(rightSide),v-offset(bottom),blur,spread,color
+    */
+    font-family: 'Oxygen', 'Roboto';
+    font-size: large;
+    font-weight: bold;
+}
+
+/* 
+descendant selectors in css
+
+
+.parentContainer p{
+    color: blue;
+} ---> selects all child of parent
+
+.parentContainer>p{
+    color: aqua;
+}--->select only child of this container and avoid subParent childs
+
+.parentContainer~p{
+    background-color: beige;
+} ---> select all elements that are present after closing tag of the parent
+
+.parentContainer+p{
+    color: blue;
+} ----> select first element present immediately after the parent
+*/
+.parentContainer>p{
+    color: brown;
+    margin: 10px 10px 40px 10px ;
+    padding: 5px;
+    border: 10px ridge blueviolet;
+    box-shadow: 13px 13px 3px 1px lightsalmon;
+}
+
+#all{
+    color: rgb(72, 158, 207);
+    font-size: larger;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px yellowgreen;
+    background-color: aquamarine;
+    margin: 5% 10% 5%;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.subParent>p{
+    color: whitesmoke;
+    background-color: rgb(58, 56, 56);
+    font-family:Tahoma, sans-serif;
+    font-size: large;
+    font-weight: 200;
+    text-align: center;
+    padding: 1%;
+    border-radius: 5rem;
+}
+
+.parentContainer+p{
+    background-color: cyan;
+    font-family: Sofia;
+    font-size: 2rem;
+    padding: 1%;
+    border-radius: 50%;
+    border: 2px groove rebeccapurple;
+    text-align: center;
+}
+.inline{
+    display: inline;
+    background-color: violet;
+    font-size: larger;
+    font-weight: 900;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+/* inline the width can't br manipulated it depends only on content present inside inline */
+.block{
+    display: block;
+    background-color: teal;
+    border: 5px outset blue;
+    position: relative;
+    top: 10px;
+    margin: 5px;
+    padding: 5px;
+    width: 250px;
+}
+/* in this block the element takes entire width irrespective of the content */
+.inline-block{
+    display: inline-block;
+    background-color: rosybrown;
+    border: 2px dashed brown;
+    width: 200px;
+    position: relative;
+    top: 10px;
+    margin: 5px;
+    padding: 5px;
+
+}
